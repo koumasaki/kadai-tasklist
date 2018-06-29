@@ -14,7 +14,6 @@
 Route::get('/', 'TasksController@index');
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('tasks', 'TasksController');
-    Route::resource('users', 'UserController', ['only' => ['show', 'destory']] );
 });
 
 //ユーザー登録
